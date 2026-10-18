@@ -1,0 +1,361 @@
+{
+ "summary": {
+  "set": "s69-eval-v1-20261017",
+  "n": 40,
+  "graph_score": 40,
+  "vector_score": 1,
+  "by_type": {
+   "attribution": {
+    "n": 12,
+    "graph": 12,
+    "vector": 0
+   },
+   "boundary": {
+    "n": 1,
+    "graph": 1,
+    "vector": 1
+   },
+   "counterexample": {
+    "n": 12,
+    "graph": 12,
+    "vector": 0
+   },
+   "evidence": {
+    "n": 12,
+    "graph": 12,
+    "vector": 0
+   },
+   "method": {
+    "n": 3,
+    "graph": 3,
+    "vector": 0
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "Q01",
+   "type": "evidence",
+   "gold": "fire_c1_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c1"
+  },
+  {
+   "id": "Q02",
+   "type": "counterexample",
+   "gold": "fire_c1_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c1"
+  },
+  {
+   "id": "Q03",
+   "type": "attribution",
+   "gold": "fire_gnn",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c1"
+  },
+  {
+   "id": "Q04",
+   "type": "evidence",
+   "gold": "fire_c2_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c2"
+  },
+  {
+   "id": "Q05",
+   "type": "counterexample",
+   "gold": "fire_c2_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c2"
+  },
+  {
+   "id": "Q06",
+   "type": "attribution",
+   "gold": "fire_gnn",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c2"
+  },
+  {
+   "id": "Q07",
+   "type": "evidence",
+   "gold": "fire_c3_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c3"
+  },
+  {
+   "id": "Q08",
+   "type": "counterexample",
+   "gold": "fire_c3_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c3"
+  },
+  {
+   "id": "Q09",
+   "type": "attribution",
+   "gold": "fire_gnn",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c3"
+  },
+  {
+   "id": "Q10",
+   "type": "evidence",
+   "gold": "fire_c4_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c4"
+  },
+  {
+   "id": "Q11",
+   "type": "counterexample",
+   "gold": "fire_c4_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c4"
+  },
+  {
+   "id": "Q12",
+   "type": "attribution",
+   "gold": "fire_gnn",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c4"
+  },
+  {
+   "id": "Q13",
+   "type": "evidence",
+   "gold": "clara_c1_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c1"
+  },
+  {
+   "id": "Q14",
+   "type": "counterexample",
+   "gold": "clara_c1_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c1"
+  },
+  {
+   "id": "Q15",
+   "type": "attribution",
+   "gold": "clara",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c1"
+  },
+  {
+   "id": "Q16",
+   "type": "evidence",
+   "gold": "clara_c2_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c2"
+  },
+  {
+   "id": "Q17",
+   "type": "counterexample",
+   "gold": "clara_c2_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c2"
+  },
+  {
+   "id": "Q18",
+   "type": "attribution",
+   "gold": "clara",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c2"
+  },
+  {
+   "id": "Q19",
+   "type": "evidence",
+   "gold": "clara_c3_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c3"
+  },
+  {
+   "id": "Q20",
+   "type": "counterexample",
+   "gold": "clara_c3_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c3"
+  },
+  {
+   "id": "Q21",
+   "type": "attribution",
+   "gold": "clara",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara_c3"
+  },
+  {
+   "id": "Q22",
+   "type": "evidence",
+   "gold": "clara_c4_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c4"
+  },
+  {
+   "id": "Q23",
+   "type": "counterexample",
+   "gold": "clara_c4_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c4"
+  },
+  {
+   "id": "Q24",
+   "type": "attribution",
+   "gold": "clara",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c4"
+  },
+  {
+   "id": "Q25",
+   "type": "evidence",
+   "gold": "gc_c1_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "gc_c1"
+  },
+  {
+   "id": "Q26",
+   "type": "counterexample",
+   "gold": "gc_c1_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "gc_c1"
+  },
+  {
+   "id": "Q27",
+   "type": "attribution",
+   "gold": "graphcast_xai",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "gc_c1"
+  },
+  {
+   "id": "Q28",
+   "type": "evidence",
+   "gold": "gc_c2_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "graphcast_xai"
+  },
+  {
+   "id": "Q29",
+   "type": "counterexample",
+   "gold": "gc_c2_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "graphcast_xai"
+  },
+  {
+   "id": "Q30",
+   "type": "attribution",
+   "gold": "graphcast_xai",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "gc_c2"
+  },
+  {
+   "id": "Q31",
+   "type": "evidence",
+   "gold": "gc_c3_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "gc_c3"
+  },
+  {
+   "id": "Q32",
+   "type": "counterexample",
+   "gold": "gc_c3_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "gc_c3"
+  },
+  {
+   "id": "Q33",
+   "type": "attribution",
+   "gold": "graphcast_xai",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "gc_c3"
+  },
+  {
+   "id": "Q34",
+   "type": "evidence",
+   "gold": "gc_c4_ev1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "graphcast_xai"
+  },
+  {
+   "id": "Q35",
+   "type": "counterexample",
+   "gold": "gc_c4_cx1",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "graphcast_xai"
+  },
+  {
+   "id": "Q36",
+   "type": "attribution",
+   "gold": "graphcast_xai",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_c4"
+  },
+  {
+   "id": "Q37",
+   "type": "method",
+   "gold": "fire_gnn_method",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "fire_gnn"
+  },
+  {
+   "id": "Q38",
+   "type": "method",
+   "gold": "clara_method",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "clara"
+  },
+  {
+   "id": "Q39",
+   "type": "method",
+   "gold": "graphcast_xai_method",
+   "graph_hit": true,
+   "vector_hit": false,
+   "vector_got": "graphcast_xai"
+  },
+  {
+   "id": "Q40",
+   "type": "boundary",
+   "gold": "boundary_set",
+   "graph_hit": true,
+   "vector_hit": true,
+   "vector_got": [
+    "clara_c4",
+    "fire_c4",
+    "gc_c4"
+   ]
+  }
+ ]
+}

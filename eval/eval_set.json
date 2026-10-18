@@ -1,0 +1,367 @@
+{
+ "set_id": "s69-eval-v1-20261017",
+ "source_graph": "build/evidence_graph.json",
+ "n_questions": 40,
+ "questions": [
+  {
+   "id": "Q01",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"7-day-ahead global fire forecast error is significantly below the operational persistence forecast\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c1_ev1",
+   "gold_text": "0.1deg MSE: 2023 lead-1 -32%, lead-7 -43%; 2024 -24% and -40% vs persistence",
+   "claim_id": "fire_c1",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q02",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"7-day-ahead global fire forecast error is significantly below the operational persistence forecast\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c1_cx1",
+   "gold_text": "The advantage grows with lead time because the 'no-change' assumption degrades faster - it does not mean high absolute 7-day accuracy",
+   "claim_id": "fire_c1",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q03",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"7-day-ahead global fire forecast error is significantly below the operational persistence forecast\"? Give the paper source id.",
+   "gold_chunk": "fire_gnn",
+   "gold_text": "arXiv:2610.11022",
+   "claim_id": "fire_c1",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q04",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Operational fire-source data is severely stale\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c2_ev1",
+   "gold_text": "Satellite fire product has ~1.5 day latency and is then frozen unchanged through the following 5 days of operational forecasts (7 days frozen in the experimental version)",
+   "claim_id": "fire_c2",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q05",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Operational fire-source data is severely stale\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c2_cx1",
+   "gold_text": "Scope limit (not a counter-result): the staleness described covers one operational chain only - NOAA GEFS-Aerosols initialised from GBBEPx; fire inputs at other centres are outside this claim's coverage",
+   "claim_id": "fire_c2",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q06",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Operational fire-source data is severely stale\"? Give the paper source id.",
+   "gold_chunk": "fire_gnn",
+   "gold_text": "arXiv:2610.11022",
+   "claim_id": "fire_c2",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q07",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Large-fire locations are reliable\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c3_ev1",
+   "gold_text": "1deg fire-detection critical success index 0.32-0.60, decaying only slowly with lead time",
+   "claim_id": "fire_c3",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q08",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Large-fire locations are reliable\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c3_cx1",
+   "gold_text": "Large-fire radiative power is systematically underestimated; small-fire locations are often wrong - intensity calibration and small-fire localisation are the authors' own two 'lessons before deployment'",
+   "claim_id": "fire_c3",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q09",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Large-fire locations are reliable\"? Give the paper source id.",
+   "gold_chunk": "fire_gnn",
+   "gold_text": "arXiv:2610.11022",
+   "claim_id": "fire_c3",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q10",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Credibility boundary\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c4_ev1",
+   "gold_text": "Training and testing both use the GBBEPx product definition",
+   "claim_id": "fire_c4",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q11",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Credibility boundary\" (paper arXiv:2610.11022)?",
+   "gold_chunk": "fire_c4_cx1",
+   "gold_text": "Real operational observation noise and product version changes not covered; preprint, not peer-reviewed",
+   "claim_id": "fire_c4",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q12",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Credibility boundary\"? Give the paper source id.",
+   "gold_chunk": "fire_gnn",
+   "gold_text": "arXiv:2610.11022",
+   "claim_id": "fire_c4",
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q13",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"A tiny model can produce joint probabilistic forecasts\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c1_ev1",
+   "gold_text": "~28k parameters; trains 40 epochs in 2.1 min on a regular CPU; one 96-station forecast takes 0.43 ms",
+   "claim_id": "clara_c1",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q14",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"A tiny model can produce joint probabilistic forecasts\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c1_cx1",
+   "gold_text": "Scope limit (not a counter-result): validated only at the scale of 96 stations, 1-48 h leads and five variables; no evidence in this paper at operational grid scale",
+   "claim_id": "clara_c1",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q15",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"A tiny model can produce joint probabilistic forecasts\"? Give the paper source id.",
+   "gold_chunk": "clara",
+   "gold_text": "arXiv:2610.09898",
+   "claim_id": "clara_c1",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q16",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Generalisation is stable across regions\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c2_ev1",
+   "gold_text": "Retrained in 10 regions on six continents: wins all 60 region-lead comparisons vs persistence, 57 vs same-scale learning models; energy score 4.9% below same-input rivals, 11%-65% below statistical baselines",
+   "claim_id": "clara_c2",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q17",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Generalisation is stable across regions\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c2_cx1",
+   "gold_text": "Wins are against persistence and same-scale baselines; never faced an operational-grade NWP system head-on",
+   "claim_id": "clara_c2",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q18",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Generalisation is stable across regions\"? Give the paper source id.",
+   "gold_chunk": "clara",
+   "gold_text": "arXiv:2610.09898",
+   "claim_id": "clara_c2",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q19",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Inter-variable correlation is real information, not decoration\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c3_ev1",
+   "gold_text": "Ablation: removing learned correlations (variance only) worsens joint-forecast negative log-likelihood by 1.0-2.8 per station",
+   "claim_id": "clara_c3",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q20",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Inter-variable correlation is real information, not decoration\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c3_cx1",
+   "gold_text": "Authors' own caveat: attention bias coefficients cannot be read directly as causal evidence of which station influenced a forecast",
+   "claim_id": "clara_c3",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q21",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Inter-variable correlation is real information, not decoration\"? Give the paper source id.",
+   "gold_chunk": "clara",
+   "gold_text": "arXiv:2610.09898",
+   "claim_id": "clara_c3",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q22",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Credibility boundary\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c4_ev1",
+   "gold_text": "Consistency proof exists for the covariance scale estimator",
+   "claim_id": "clara_c4",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q23",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Credibility boundary\" (paper arXiv:2610.09898)?",
+   "gold_chunk": "clara_c4_cx1",
+   "gold_text": "At long leads the proof's premises break first, causing over-correction; joint distribution assumes Gaussianity, extreme tails (where compound disasters live) may be poorly described; preprint",
+   "claim_id": "clara_c4",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q24",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Credibility boundary\"? Give the paper source id.",
+   "gold_chunk": "clara",
+   "gold_text": "arXiv:2610.09898",
+   "claim_id": "clara_c4",
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q25",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Nobody taught it IVT, yet GraphCast internally computes it stably\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c1_ev1",
+   "gold_text": "IVT never appears as input or forecast target, yet is stably detected in internal activations; concepts persist across processor depths",
+   "claim_id": "gc_c1",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q26",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Nobody taught it IVT, yet GraphCast internally computes it stably\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c1_cx1",
+   "gold_text": "Correlation 0.51 evidences that the concept is detected, not the model's computational precision for IVT",
+   "claim_id": "gc_c1",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q27",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Nobody taught it IVT, yet GraphCast internally computes it stably\"? Give the paper source id.",
+   "gold_chunk": "graphcast_xai",
+   "gold_text": "arXiv:2610.07583; code: github.com/AikyamLab/climate_xai",
+   "claim_id": "gc_c1",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q28",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"The strongest concept tracks atmospheric river intensity\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c2_ev1",
+   "gold_text": "Concept 99 'global atmospheric river' correlates 0.51 (time-mean) with regional maximum IVT; concept 1592 responds specifically to strong North-American west-coast IVT; concepts form a parent-child hierarchy (99 is a parent)",
+   "claim_id": "gc_c2",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q29",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"The strongest concept tracks atmospheric river intensity\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c2_cx1",
+   "gold_text": "Scope limit (not a counter-result): the time-mean correlation is 0.51, so a single strongest concept still leaves most IVT variance unexplained; responses are regional (concept 1592 is specific to strong North-American west-coast IVT)",
+   "claim_id": "gc_c2",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q30",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"The strongest concept tracks atmospheric river intensity\"? Give the paper source id.",
+   "gold_chunk": "graphcast_xai",
+   "gold_text": "arXiv:2610.07583; code: github.com/AikyamLab/climate_xai",
+   "claim_id": "gc_c2",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q31",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"The concepts are actually used by the model, not bystander correlations\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c3_ev1",
+   "gold_text": "Directly intervening on internal activations changes the forecast accordingly",
+   "claim_id": "gc_c3",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q32",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"The concepts are actually used by the model, not bystander correlations\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c3_cx1",
+   "gold_text": "Intervention evidence is complete only for the atmospheric-river phenomenon class",
+   "claim_id": "gc_c3",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q33",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"The concepts are actually used by the model, not bystander correlations\"? Give the paper source id.",
+   "gold_chunk": "graphcast_xai",
+   "gold_text": "arXiv:2610.07583; code: github.com/AikyamLab/climate_xai",
+   "claim_id": "gc_c3",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q34",
+   "type": "evidence",
+   "question": "What evidence supports this claim: \"Credibility boundary\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c4_ev1",
+   "gold_text": "Code is open source and reproducible",
+   "claim_id": "gc_c4",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q35",
+   "type": "counterexample",
+   "question": "What is the counterexample or limit for this claim: \"Credibility boundary\" (paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai)?",
+   "gold_chunk": "gc_c4_cx1",
+   "gold_text": "Fully validated only on atmospheric rivers; fronts, blocking highs and other phenomena unverified; preprint",
+   "claim_id": "gc_c4",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q36",
+   "type": "attribution",
+   "question": "Which paper does this claim come from: \"Credibility boundary\"? Give the paper source id.",
+   "gold_chunk": "graphcast_xai",
+   "gold_text": "arXiv:2610.07583; code: github.com/AikyamLab/climate_xai",
+   "claim_id": "gc_c4",
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q37",
+   "type": "method",
+   "question": "What method was used in the paper arXiv:2610.11022 (\"A Graph Neural Network for Global Daily Fire Radiative Power Prediction at Medium-Range Lead Times\")?",
+   "gold_chunk": "fire_gnn_method",
+   "gold_text": "Spatiotemporal GNN (grid cells linked by geographic proximity); inputs: historical fire points + reanalysis meteorology + land cover/vegetation; trained 2020-2022, fully held-out test 2023 and 2024; baseline: operational persistence forecast.",
+   "claim_id": null,
+   "paper_id": "fire_gnn"
+  },
+  {
+   "id": "Q38",
+   "type": "method",
+   "question": "What method was used in the paper arXiv:2610.09898 (\"Learning joint probabilistic weather forecasts from station observations alone (CLARA)\")?",
+   "gold_chunk": "clara_method",
+   "gold_text": "Wind-direction-biased attention (upwind positions back-tracked by lead time, weights decay with lead) + five-variable joint Gaussian output; station observations only, no NWP or reanalysis inputs.",
+   "claim_id": null,
+   "paper_id": "clara"
+  },
+  {
+   "id": "Q39",
+   "type": "method",
+   "question": "What method was used in the paper arXiv:2610.07583; code: github.com/AikyamLab/climate_xai (\"Mechanistic Interpretability of Atmospheric Rivers in GraphCast\")?",
+   "gold_chunk": "graphcast_xai_method",
+   "gold_text": "Sparse autoencoders (Matryoshka variant) fitted at GraphCast processor layers 0/8/15 as a 'concept dictionary' (512-dim activations -> 4096 entries); concepts matched against real atmospheric phenomena, with internal activation interventions to test causality.",
+   "claim_id": null,
+   "paper_id": "graphcast_xai"
+  },
+  {
+   "id": "Q40",
+   "type": "boundary",
+   "question": "Which claims in the pack are the papers' own credibility-boundary claims? List their claim ids.",
+   "gold_chunk": "boundary_set",
+   "gold_text": "fire_c4, clara_c4, gc_c4",
+   "claim_id": null,
+   "paper_id": null
+  }
+ ]
+}

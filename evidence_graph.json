@@ -1,0 +1,411 @@
+{
+ "nodes": {
+  "Paper": [
+   {
+    "id": "fire_gnn",
+    "title": "A Graph Neural Network for Global Daily Fire Radiative Power Prediction at Medium-Range Lead Times",
+    "authors": "Li Zhang, Jun Wang, Isidora Jankov et al. (NOAA / CU Boulder)",
+    "source": "arXiv:2610.11022"
+   },
+   {
+    "id": "clara",
+    "title": "Learning joint probabilistic weather forecasts from station observations alone (CLARA)",
+    "authors": "Chaeyeon Yi, Yun Am Seo (HUFS / Jeju National University)",
+    "source": "arXiv:2610.09898"
+   },
+   {
+    "id": "graphcast_xai",
+    "title": "Mechanistic Interpretability of Atmospheric Rivers in GraphCast",
+    "authors": "Madelyn Mathai et al. (University of Virginia)",
+    "source": "arXiv:2610.07583; code: github.com/AikyamLab/climate_xai"
+   }
+  ],
+  "Claim": [
+   {
+    "id": "fire_c1",
+    "paper": "fire_gnn",
+    "text": "7-day-ahead global fire forecast error is significantly below the operational persistence forecast"
+   },
+   {
+    "id": "fire_c2",
+    "paper": "fire_gnn",
+    "text": "Operational fire-source data is severely stale"
+   },
+   {
+    "id": "fire_c3",
+    "paper": "fire_gnn",
+    "text": "Large-fire locations are reliable"
+   },
+   {
+    "id": "fire_c4",
+    "paper": "fire_gnn",
+    "text": "Credibility boundary"
+   },
+   {
+    "id": "clara_c1",
+    "paper": "clara",
+    "text": "A tiny model can produce joint probabilistic forecasts"
+   },
+   {
+    "id": "clara_c2",
+    "paper": "clara",
+    "text": "Generalisation is stable across regions"
+   },
+   {
+    "id": "clara_c3",
+    "paper": "clara",
+    "text": "Inter-variable correlation is real information, not decoration"
+   },
+   {
+    "id": "clara_c4",
+    "paper": "clara",
+    "text": "Credibility boundary"
+   },
+   {
+    "id": "gc_c1",
+    "paper": "graphcast_xai",
+    "text": "Nobody taught it IVT, yet GraphCast internally computes it stably"
+   },
+   {
+    "id": "gc_c2",
+    "paper": "graphcast_xai",
+    "text": "The strongest concept tracks atmospheric river intensity"
+   },
+   {
+    "id": "gc_c3",
+    "paper": "graphcast_xai",
+    "text": "The concepts are actually used by the model, not bystander correlations"
+   },
+   {
+    "id": "gc_c4",
+    "paper": "graphcast_xai",
+    "text": "Credibility boundary"
+   }
+  ],
+  "Evidence": [
+   {
+    "id": "fire_c1_ev1",
+    "text": "0.1deg MSE: 2023 lead-1 -32%, lead-7 -43%; 2024 -24% and -40% vs persistence"
+   },
+   {
+    "id": "fire_c2_ev1",
+    "text": "Satellite fire product has ~1.5 day latency and is then frozen unchanged through the following 5 days of operational forecasts (7 days frozen in the experimental version)"
+   },
+   {
+    "id": "fire_c3_ev1",
+    "text": "1deg fire-detection critical success index 0.32-0.60, decaying only slowly with lead time"
+   },
+   {
+    "id": "fire_c4_ev1",
+    "text": "Training and testing both use the GBBEPx product definition"
+   },
+   {
+    "id": "clara_c1_ev1",
+    "text": "~28k parameters; trains 40 epochs in 2.1 min on a regular CPU; one 96-station forecast takes 0.43 ms"
+   },
+   {
+    "id": "clara_c2_ev1",
+    "text": "Retrained in 10 regions on six continents: wins all 60 region-lead comparisons vs persistence, 57 vs same-scale learning models; energy score 4.9% below same-input rivals, 11%-65% below statistical baselines"
+   },
+   {
+    "id": "clara_c3_ev1",
+    "text": "Ablation: removing learned correlations (variance only) worsens joint-forecast negative log-likelihood by 1.0-2.8 per station"
+   },
+   {
+    "id": "clara_c4_ev1",
+    "text": "Consistency proof exists for the covariance scale estimator"
+   },
+   {
+    "id": "gc_c1_ev1",
+    "text": "IVT never appears as input or forecast target, yet is stably detected in internal activations; concepts persist across processor depths"
+   },
+   {
+    "id": "gc_c2_ev1",
+    "text": "Concept 99 'global atmospheric river' correlates 0.51 (time-mean) with regional maximum IVT; concept 1592 responds specifically to strong North-American west-coast IVT; concepts form a parent-child hierarchy (99 is a parent)"
+   },
+   {
+    "id": "gc_c3_ev1",
+    "text": "Directly intervening on internal activations changes the forecast accordingly"
+   },
+   {
+    "id": "gc_c4_ev1",
+    "text": "Code is open source and reproducible"
+   }
+  ],
+  "Counterexample": [
+   {
+    "id": "fire_c1_cx1",
+    "text": "The advantage grows with lead time because the 'no-change' assumption degrades faster - it does not mean high absolute 7-day accuracy"
+   },
+   {
+    "id": "fire_c2_cx1",
+    "text": "Scope limit (not a counter-result): the staleness described covers one operational chain only - NOAA GEFS-Aerosols initialised from GBBEPx; fire inputs at other centres are outside this claim's coverage"
+   },
+   {
+    "id": "fire_c3_cx1",
+    "text": "Large-fire radiative power is systematically underestimated; small-fire locations are often wrong - intensity calibration and small-fire localisation are the authors' own two 'lessons before deployment'"
+   },
+   {
+    "id": "fire_c4_cx1",
+    "text": "Real operational observation noise and product version changes not covered; preprint, not peer-reviewed"
+   },
+   {
+    "id": "clara_c1_cx1",
+    "text": "Scope limit (not a counter-result): validated only at the scale of 96 stations, 1-48 h leads and five variables; no evidence in this paper at operational grid scale"
+   },
+   {
+    "id": "clara_c2_cx1",
+    "text": "Wins are against persistence and same-scale baselines; never faced an operational-grade NWP system head-on"
+   },
+   {
+    "id": "clara_c3_cx1",
+    "text": "Authors' own caveat: attention bias coefficients cannot be read directly as causal evidence of which station influenced a forecast"
+   },
+   {
+    "id": "clara_c4_cx1",
+    "text": "At long leads the proof's premises break first, causing over-correction; joint distribution assumes Gaussianity, extreme tails (where compound disasters live) may be poorly described; preprint"
+   },
+   {
+    "id": "gc_c1_cx1",
+    "text": "Correlation 0.51 evidences that the concept is detected, not the model's computational precision for IVT"
+   },
+   {
+    "id": "gc_c2_cx1",
+    "text": "Scope limit (not a counter-result): the time-mean correlation is 0.51, so a single strongest concept still leaves most IVT variance unexplained; responses are regional (concept 1592 is specific to strong North-American west-coast IVT)"
+   },
+   {
+    "id": "gc_c3_cx1",
+    "text": "Intervention evidence is complete only for the atmospheric-river phenomenon class"
+   },
+   {
+    "id": "gc_c4_cx1",
+    "text": "Fully validated only on atmospheric rivers; fronts, blocking highs and other phenomena unverified; preprint"
+   }
+  ],
+  "Method": [
+   {
+    "id": "fire_gnn_method",
+    "text": "Spatiotemporal GNN (grid cells linked by geographic proximity); inputs: historical fire points + reanalysis meteorology + land cover/vegetation; trained 2020-2022, fully held-out test 2023 and 2024; baseline: operational persistence forecast."
+   },
+   {
+    "id": "clara_method",
+    "text": "Wind-direction-biased attention (upwind positions back-tracked by lead time, weights decay with lead) + five-variable joint Gaussian output; station observations only, no NWP or reanalysis inputs."
+   },
+   {
+    "id": "graphcast_xai_method",
+    "text": "Sparse autoencoders (Matryoshka variant) fitted at GraphCast processor layers 0/8/15 as a 'concept dictionary' (512-dim activations -> 4096 entries); concepts matched against real atmospheric phenomena, with internal activation interventions to test causality."
+   }
+  ],
+  "Dataset": [
+   {
+    "id": "fire_gnn_data",
+    "text": "GBBEPx satellite fire radiative power (FRP) product"
+   },
+   {
+    "id": "clara_data",
+    "text": "Korean automatic weather station system, 96 stations; lead times 1-48h in six bands"
+   },
+   {
+    "id": "graphcast_xai_data",
+    "text": "GraphCast internal activations vs atmospheric river phenomena and IVT (integrated vapour transport) diagnostics"
+   }
+  ]
+ },
+ "edges": [
+  [
+   "fire_gnn",
+   "TESTED_BY",
+   "fire_gnn_method"
+  ],
+  [
+   "fire_c1",
+   "SUPPORTED_BY",
+   "fire_c1_ev1"
+  ],
+  [
+   "fire_c1_ev1",
+   "DERIVED_FROM",
+   "fire_gnn_data"
+  ],
+  [
+   "fire_c1",
+   "CONTRADICTED_BY",
+   "fire_c1_cx1"
+  ],
+  [
+   "fire_c2",
+   "SUPPORTED_BY",
+   "fire_c2_ev1"
+  ],
+  [
+   "fire_c2_ev1",
+   "DERIVED_FROM",
+   "fire_gnn_data"
+  ],
+  [
+   "fire_c2",
+   "CONTRADICTED_BY",
+   "fire_c2_cx1"
+  ],
+  [
+   "fire_c3",
+   "SUPPORTED_BY",
+   "fire_c3_ev1"
+  ],
+  [
+   "fire_c3_ev1",
+   "DERIVED_FROM",
+   "fire_gnn_data"
+  ],
+  [
+   "fire_c3",
+   "CONTRADICTED_BY",
+   "fire_c3_cx1"
+  ],
+  [
+   "fire_c4",
+   "SUPPORTED_BY",
+   "fire_c4_ev1"
+  ],
+  [
+   "fire_c4_ev1",
+   "DERIVED_FROM",
+   "fire_gnn_data"
+  ],
+  [
+   "fire_c4",
+   "CONTRADICTED_BY",
+   "fire_c4_cx1"
+  ],
+  [
+   "clara",
+   "TESTED_BY",
+   "clara_method"
+  ],
+  [
+   "clara_c1",
+   "SUPPORTED_BY",
+   "clara_c1_ev1"
+  ],
+  [
+   "clara_c1_ev1",
+   "DERIVED_FROM",
+   "clara_data"
+  ],
+  [
+   "clara_c1",
+   "CONTRADICTED_BY",
+   "clara_c1_cx1"
+  ],
+  [
+   "clara_c2",
+   "SUPPORTED_BY",
+   "clara_c2_ev1"
+  ],
+  [
+   "clara_c2_ev1",
+   "DERIVED_FROM",
+   "clara_data"
+  ],
+  [
+   "clara_c2",
+   "CONTRADICTED_BY",
+   "clara_c2_cx1"
+  ],
+  [
+   "clara_c3",
+   "SUPPORTED_BY",
+   "clara_c3_ev1"
+  ],
+  [
+   "clara_c3_ev1",
+   "DERIVED_FROM",
+   "clara_data"
+  ],
+  [
+   "clara_c3",
+   "CONTRADICTED_BY",
+   "clara_c3_cx1"
+  ],
+  [
+   "clara_c4",
+   "SUPPORTED_BY",
+   "clara_c4_ev1"
+  ],
+  [
+   "clara_c4_ev1",
+   "DERIVED_FROM",
+   "clara_data"
+  ],
+  [
+   "clara_c4",
+   "CONTRADICTED_BY",
+   "clara_c4_cx1"
+  ],
+  [
+   "graphcast_xai",
+   "TESTED_BY",
+   "graphcast_xai_method"
+  ],
+  [
+   "gc_c1",
+   "SUPPORTED_BY",
+   "gc_c1_ev1"
+  ],
+  [
+   "gc_c1_ev1",
+   "DERIVED_FROM",
+   "graphcast_xai_data"
+  ],
+  [
+   "gc_c1",
+   "CONTRADICTED_BY",
+   "gc_c1_cx1"
+  ],
+  [
+   "gc_c2",
+   "SUPPORTED_BY",
+   "gc_c2_ev1"
+  ],
+  [
+   "gc_c2_ev1",
+   "DERIVED_FROM",
+   "graphcast_xai_data"
+  ],
+  [
+   "gc_c2",
+   "CONTRADICTED_BY",
+   "gc_c2_cx1"
+  ],
+  [
+   "gc_c3",
+   "SUPPORTED_BY",
+   "gc_c3_ev1"
+  ],
+  [
+   "gc_c3_ev1",
+   "DERIVED_FROM",
+   "graphcast_xai_data"
+  ],
+  [
+   "gc_c3",
+   "CONTRADICTED_BY",
+   "gc_c3_cx1"
+  ],
+  [
+   "gc_c4",
+   "SUPPORTED_BY",
+   "gc_c4_ev1"
+  ],
+  [
+   "gc_c4_ev1",
+   "DERIVED_FROM",
+   "graphcast_xai_data"
+  ],
+  [
+   "gc_c4",
+   "CONTRADICTED_BY",
+   "gc_c4_cx1"
+  ]
+ ]
+}

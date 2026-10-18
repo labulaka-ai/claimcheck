@@ -1,0 +1,271 @@
+{
+ "summary": {
+  "variant": "B claim-anchored TF-IDF, candidates restricted to gold type",
+  "n": 40,
+  "score": 32,
+  "by_type": {
+   "attribution": {
+    "n": 12,
+    "hits": 10
+   },
+   "boundary": {
+    "n": 1,
+    "hits": 0
+   },
+   "counterexample": {
+    "n": 12,
+    "hits": 9
+   },
+   "evidence": {
+    "n": 12,
+    "hits": 10
+   },
+   "method": {
+    "n": 3,
+    "hits": 3
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "Q01",
+   "type": "evidence",
+   "hit": true,
+   "got": "fire_c1_ev1"
+  },
+  {
+   "id": "Q02",
+   "type": "counterexample",
+   "hit": true,
+   "got": "fire_c1_cx1"
+  },
+  {
+   "id": "Q03",
+   "type": "attribution",
+   "hit": true,
+   "got": "fire_gnn"
+  },
+  {
+   "id": "Q04",
+   "type": "evidence",
+   "hit": true,
+   "got": "fire_c2_ev1"
+  },
+  {
+   "id": "Q05",
+   "type": "counterexample",
+   "hit": true,
+   "got": "fire_c2_cx1"
+  },
+  {
+   "id": "Q06",
+   "type": "attribution",
+   "hit": true,
+   "got": "fire_gnn"
+  },
+  {
+   "id": "Q07",
+   "type": "evidence",
+   "hit": true,
+   "got": "fire_c3_ev1"
+  },
+  {
+   "id": "Q08",
+   "type": "counterexample",
+   "hit": true,
+   "got": "fire_c3_cx1"
+  },
+  {
+   "id": "Q09",
+   "type": "attribution",
+   "hit": true,
+   "got": "fire_gnn"
+  },
+  {
+   "id": "Q10",
+   "type": "evidence",
+   "hit": false,
+   "got": "gc_c4_ev1"
+  },
+  {
+   "id": "Q11",
+   "type": "counterexample",
+   "hit": false,
+   "got": "fire_c2_cx1"
+  },
+  {
+   "id": "Q12",
+   "type": "attribution",
+   "hit": false,
+   "got": "clara"
+  },
+  {
+   "id": "Q13",
+   "type": "evidence",
+   "hit": true,
+   "got": "clara_c1_ev1"
+  },
+  {
+   "id": "Q14",
+   "type": "counterexample",
+   "hit": true,
+   "got": "clara_c1_cx1"
+  },
+  {
+   "id": "Q15",
+   "type": "attribution",
+   "hit": true,
+   "got": "clara"
+  },
+  {
+   "id": "Q16",
+   "type": "evidence",
+   "hit": true,
+   "got": "clara_c2_ev1"
+  },
+  {
+   "id": "Q17",
+   "type": "counterexample",
+   "hit": true,
+   "got": "clara_c2_cx1"
+  },
+  {
+   "id": "Q18",
+   "type": "attribution",
+   "hit": true,
+   "got": "clara"
+  },
+  {
+   "id": "Q19",
+   "type": "evidence",
+   "hit": true,
+   "got": "clara_c3_ev1"
+  },
+  {
+   "id": "Q20",
+   "type": "counterexample",
+   "hit": true,
+   "got": "clara_c3_cx1"
+  },
+  {
+   "id": "Q21",
+   "type": "attribution",
+   "hit": true,
+   "got": "clara"
+  },
+  {
+   "id": "Q22",
+   "type": "evidence",
+   "hit": false,
+   "got": "gc_c4_ev1"
+  },
+  {
+   "id": "Q23",
+   "type": "counterexample",
+   "hit": false,
+   "got": "fire_c2_cx1"
+  },
+  {
+   "id": "Q24",
+   "type": "attribution",
+   "hit": true,
+   "got": "clara"
+  },
+  {
+   "id": "Q25",
+   "type": "evidence",
+   "hit": true,
+   "got": "gc_c1_ev1"
+  },
+  {
+   "id": "Q26",
+   "type": "counterexample",
+   "hit": true,
+   "got": "gc_c1_cx1"
+  },
+  {
+   "id": "Q27",
+   "type": "attribution",
+   "hit": true,
+   "got": "graphcast_xai"
+  },
+  {
+   "id": "Q28",
+   "type": "evidence",
+   "hit": true,
+   "got": "gc_c2_ev1"
+  },
+  {
+   "id": "Q29",
+   "type": "counterexample",
+   "hit": true,
+   "got": "gc_c2_cx1"
+  },
+  {
+   "id": "Q30",
+   "type": "attribution",
+   "hit": true,
+   "got": "graphcast_xai"
+  },
+  {
+   "id": "Q31",
+   "type": "evidence",
+   "hit": true,
+   "got": "gc_c3_ev1"
+  },
+  {
+   "id": "Q32",
+   "type": "counterexample",
+   "hit": true,
+   "got": "gc_c3_cx1"
+  },
+  {
+   "id": "Q33",
+   "type": "attribution",
+   "hit": true,
+   "got": "graphcast_xai"
+  },
+  {
+   "id": "Q34",
+   "type": "evidence",
+   "hit": true,
+   "got": "gc_c4_ev1"
+  },
+  {
+   "id": "Q35",
+   "type": "counterexample",
+   "hit": false,
+   "got": "fire_c2_cx1"
+  },
+  {
+   "id": "Q36",
+   "type": "attribution",
+   "hit": false,
+   "got": "clara"
+  },
+  {
+   "id": "Q37",
+   "type": "method",
+   "hit": true,
+   "got": "fire_gnn_method"
+  },
+  {
+   "id": "Q38",
+   "type": "method",
+   "hit": true,
+   "got": "clara_method"
+  },
+  {
+   "id": "Q39",
+   "type": "method",
+   "hit": true,
+   "got": "graphcast_xai_method"
+  },
+  {
+   "id": "Q40",
+   "type": "boundary",
+   "hit": false,
+   "note": "no boundary chunk in flat corpus"
+  }
+ ]
+}
